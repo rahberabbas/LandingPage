@@ -361,3 +361,12 @@ footer p {
     margin-right: 15px;
 }
 }
+
+#modal-body1{
+    padding: 1rem 2rem;
+}
+
+#modal-body1 h1{
+    font-weight: 700;
+    text-align: center;
+}
