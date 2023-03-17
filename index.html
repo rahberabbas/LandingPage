@@ -245,6 +245,15 @@
                             <input type="text" class="form-control" id="phone" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Select Time</label>
+                            <select class="form-select" id="time" aria-label="Default select example">
+                                <option selected>Best time to contact you</option>
+                                <option value="Mornings (between 9.00am and 12.00pm)">Mornings (between 9.00am and 12.00pm)</option>
+                                <option value="Afternoons (between 12.00pm and 5.00pm)">Afternoons (between 12.00pm and 5.00pm)</option>
+                                <option value="Evenings (between 5.00apm and 8.00pm)">Evenings (between 5.00apm and 8.00pm)</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Requirements</label>
                             <textarea class="form-control" id="req" rows="3"></textarea>
                         </div>
@@ -269,7 +278,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" id="modal-body1">
-                    <h1>Thankyou for Booking the Appointment.</h1>
+                    <h1>Thank you for submitting your request. One of our Qualified Accountants will contact you soo</h1>
 
 
                 </div>
@@ -307,15 +316,16 @@
                 let lname = document.getElementById("email").value;
                 let email = document.getElementById("city").value;
                 let mobile = document.getElementById("phone").value;
+                let time = document.getElementById("time").value;
                 let check_in = document.getElementById("req").value;
-                let finalmessage = `Full Name : ${fname} <br> Email : ${lname} <br>  City : ${email} <br> Mobile : ${mobile} <br>  Requirements : ${check_in} <br>`;
+                let finalmessage = `Full Name : ${fname} <br> Email : ${lname} <br>  City : ${email} <br> Mobile : ${mobile} <br> Time : ${time} <br>  Requirements : ${check_in} <br>`;
                 Email.send({
                     Host: "smtp.elasticemail.com",
                     Username: "info.taxandfigure@gmail.com",
                     Password: "670ED0A533368176A0F743E47F516877D76A",
                     port: 2525,
                     // SecureToken: "4f166c80-af24-4c71-a3fe-a5c3a576b701",
-                    To: 'Siddharth@taxandfigures.com',
+                    To: 'amaanabidi1234@gmail.com',
                     From: 'info.taxandfigure@gmail.com',
                     Subject: "Mail from website",
                     Body: finalmessage
