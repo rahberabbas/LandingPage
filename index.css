@@ -332,6 +332,10 @@ footer p {
     margin: 0px;
 }
 
+.modal-text{
+    display: none;
+}
+
 @media screen and (max-width:600px) {
     .service-boxes li {
         /* display: inline-block; */
